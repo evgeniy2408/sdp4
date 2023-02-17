@@ -1,0 +1,56 @@
+[
+    {
+        "id":1,
+        "title":"Кресло велюровое",
+        "model":"X-24",
+        "price": "15990",
+        "oldPrice": "24990",
+        "discount": "-9000",
+        "mainImage": "./offers/images/1/1.png"
+    },
+    {
+        "id":2,
+        "title":"Диван тканевый",
+        "model":"Z-44",
+        "price": "22990",
+        "oldPrice": "32990",
+        "discount": "-10000",
+        "mainImage": "./offers/images/2/2.png"
+    },
+    {
+        "id":3,
+        "title":"Будильник",
+        "model":"Quartz-23",
+        "price": "1290",
+        "oldPrice": "1890",
+        "discount": "-600",
+        "mainImage": "./offers/images/3/3.png"
+    },
+    {
+        "id":4,
+        "title":"Мини-скульптура",
+        "model":"Oh my deer",
+        "price": "690",
+        "oldPrice": "990",
+        "discount": "-300",
+        "mainImage": "./offers/images/4/4.png"
+    },
+    {
+        "id":5,
+        "title":"Диван вел-флок",
+        "model":"Z-85",
+        "price": "22990",
+        "oldPrice": "32990",
+        "discount": "-10000",
+        "mainImage": "./offers/images/5/5.png"
+    },
+    {
+        "id":6,
+        "title":"Термометр + гидрометр",
+        "model":"H-18",
+        "price": "1390",
+        "oldPrice": "2090",
+        "discount": "-700",
+        "mainImage": "./offers/images/6/6.png"
+    }
+]

@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.svg" type="image/svg">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>SDP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="preload" href="fonts/MullerRegular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/MullerRegular.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/OpenSansRegular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/OpenSansRegular.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/OpenSansBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/OpenSansBold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/OpenSansSemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/OpenSansSemiBold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/PlayfairDisplay.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/PlayfairDisplay.woff" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/main.js"></script>
+</head>
+
+<body>
+  <div class="site-container">
+    <header class="header">
+  <div class="header__top ">
+    <div class="container grid header__top-container">
+      <div class="header__top-left" tabindex="1">
+        <div class="header__top-left-wrapper">
+          <p class="mp-reset header__top-left-descr">
+            Ваш регион:
+          </p>
+          <div class="select select--city" id="City" tabindex="0">
+            <select tabindex="0" aria-label="Выбор города" class="custom-select " name="select" id="SelectCity">
+              <option value="Москва">Москва</option>
+              <option value="Казань">Казань</option>
+              <option value="Уфа">Уфа</option>
+              <option value="Пермь">Пермь</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="header__call header__call--ef">
+          <svg class="header__call-icon" id="call">
+            <use class="call" xlink:href="img/sprite.svg#mdi_call"></use>
+          </svg>
+          <a href="tel:74958854547" class="header__call-link" aria-label="Наш номер +7 (495) 885-45-47"> +7 (495)
+            885-45-47</a>
+        </div>
+      </div>
+      <div class="header__top-right " data-list>
+        <ul class="list-reset header__list">
+          <li class="header__list-item"><a href="contact.html" class="header__list-link header__list-link--ef"
+              aria-label="О компании">О компании</a></li>
+          <li class="header__list-item"><a href="#" class="header__list-link header__list-link--ef"
+              aria-label="Гарантия и возврат">Гарантия и возврат</a></li>
+          <li class="header__list-item"><a href="сooperation.html" class="header__list-link header__list-link--ef"
+              aria-label="Корпоративным клиентам">Корпоративным клиентам</a></li>
+          <li class="header__list-item"><a href="#" class="header__list-link header__list-link--ef"
+              aria-label="Дизайн-решение">Дизайн-решение</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container grid header__average">
+    <div class="header__average-left">
+      <button class="burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+        <span class="burger__line"></span>
+      </button>
+
+      <a href="index.html" class="logo" aria-label="sdp логотип">
+        <img src="/img/logo.svg" alt="sdp логотип">
+      </a>
+
+    </div>
+    <nav class="nav header__nav menu" data-menu>
+      <ul class="list-reset nav__list">
+        <li class="nav__item">
+          <a href="catalog.html" class="nav__link nav__link--ef" aria-label="Каталог">Каталог</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link nav__link--ef" aria-label="Магазины">Магазины</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link nav__link--ef" aria-label="Шоу-рум">Шоу-рум</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link nav__link--ef" aria-label="Доставка и оплата">Доставка и оплата</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link nav__link--ef" aria-label="Дисконт">Дисконт</a>
+        </li>
+        <li class="nav__item">
+          <a href="contact.html" class="nav__link nav__link--ef" aria-label="Контакты">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container grid header__lower">
+    <div class="header__lower-left">
+      <div class="header__search-wrapper">
+        <form tabindex="0" action="#" class="header__search-form  header__search-form--ef" aria-label="Поиск по сайту">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="#999999" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M17.8187 16.0625L14.607 13.3156C15.5516 12.0945 16.0625 10.6016 16.0625 9.03125C16.0625 7.15156 15.3289 5.38906 14.0023 4.06016C12.6758 2.73125 10.9086 2 9.03125 2C7.15391 2 5.38672 2.73359 4.06016 4.06016C2.73125 5.38672 2 7.15156 2 9.03125C2 10.9086 2.73359 12.6758 4.06016 14.0023C5.38672 15.3312 7.15156 16.0625 9.03125 16.0625C10.6016 16.0625 12.0922 15.5516 13.3133 14.6094L16.5249 17.3539C16.5428 17.3718 16.564 17.3859 16.5873 17.3956C16.6106 17.4053 16.6356 17.4102 16.6609 17.4102C16.6861 17.4102 16.7111 17.4053 16.7344 17.3956C16.7578 17.3859 16.7789 17.3718 16.7968 17.3539L17.8187 16.3344C17.8365 16.3165 17.8507 16.2953 17.8604 16.272C17.87 16.2487 17.875 16.2237 17.875 16.1984C17.875 16.1732 17.87 16.1482 17.8604 16.1249C17.8507 16.1015 17.8365 16.0803 17.8187 16.0625ZM12.7438 12.7438C11.75 13.7352 10.4328 14.2812 9.03125 14.2812C7.62969 14.2812 6.3125 13.7352 5.31875 12.7438C4.32734 11.75 3.78125 10.4328 3.78125 9.03125C3.78125 7.62969 4.32734 6.31016 5.31875 5.31875C6.3125 4.32734 7.62969 3.78125 9.03125 3.78125C10.4328 3.78125 11.7523 4.325 12.7438 5.31875C13.7352 6.3125 14.2812 7.62969 14.2812 9.03125C14.2812 10.4328 13.7352 11.7523 12.7438 12.7438Z" />
+          </svg>
+          <input type="text" class="input  input--search-form-input" placeholder="Я хочу купить...">
+        </form>
+        <svg class="header__search-arrow" id="search_arrow">
+          <use class="search" xlink:href="img/sprite.svg#search_arrow"></use>
+        </svg>
+
+      </div>
+      <div tabindex="0" class="select select--category" id="category">
+        <select class="custom-select " name="select" id="SelectCategory">
+          <option value="Категория">Категория</option>
+          <option value="Диваны">Диваны</option>
+          <option value="Комоды">Комоды</option>
+          <option value="Кресла">Кресла</option>
+          <option value="Стулья">Стулья</option>
+          <option value="Пуфы">Пуфы</option>
+          <option value="Столы">Столы</option>
+          <option value="Кровати">Кровати</option>
+          <option value="Аксессуары">Аксессуары</option>
+          <option value="Тумбы">Тумбы</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="header__lower-right">
+      <div class="header__btns">
+        <button aria-label="Войти" class="btn-reset header__btn-login header__btn-login--ef">
+          <svg class="personal-area-icon" id="personal-area">
+            <use class="btns" xlink:href="img/sprite.svg#personal-area"></use>
+          </svg>
+        </button>
+        <div class="header__basket basket basket--ef">
+          <button aria-label="Корзина" class="btn-reset basket__btn header__btn-login header__btn-login--ef basket__btn--inactive">
+            <svg class="basket__icon" id="basket">
+              <use class="btns" xlink:href="img/sprite.svg#basket"></use>
+            </svg>
+            <span class="basket__count">0</span>
+          </button>
+          <div class="basket-content basket-content-catalog basket-content-cart">
+            <ul class="basket-content__list  basket-content-catalog__list  basket-content-cart__list list-reset"
+              data-simplebar>
+
+            </ul>
+            <div class="basket-content__bottom">
+              <div class="basket-content__fullprice">
+                <span>Итого:</span>
+                <span class="fullprice">0 руб</span>
+              </div>
+              <button class="btn btn-reset btn--fill btn--fill-ef basket-content__btn"
+                data-graph-path="basket-modal">Купить в один клик</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+    <main class="main">
+      <h1 class="mp-reset visually-hidden">Каталог</h1>
+      <section class="catalog">
+        <div class="breadcrumbs breadcrumbs-catalog">
+  <div class="container">
+    <ul class="breadcrumbs__list list-reset">
+      <li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
+      <li class="breadcrumbs__item"><a href="catalog.html" class="breadcrumbs__link">Каталог</a></li>
+      <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Диваны</a></li>
+      <li class="breadcrumbs__item"><a class="breadcrumbs__link breadcrumbs__link--current">Прямые диваны</a></li>
+    </ul>
+  </div>
+</div>
+
+        <div class="catalog__content">
+          <div class="container grid catalog__container">
+            <h2 class="visually-hidden catalog__title">Каталог</h2>
+            <div class="catalog-filters">
+  <div class="catalog-filter">
+    <div class="catalog-filter__top ">
+      <h3 class="mp-reset catalog-filter__title catalog-filter__title--1">Фильтровать по:</h3>
+      <h3 class="mp-reset catalog-filter__title catalog-filter__title--2">Фильтры:</h3>
+      <ul class="list-reset catalog__list">
+        <li class="catalog-filter__category catalog-category catalog__list-item">
+          <button class="btn-reset btn-catalog catalog-category__title"><span>Категория</span>
+            <svg class="catalog-icon" width="13" height="8" viewBox="0 0 13 8" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M6.65674 5.80521L11.5593 0.902607L12.3136 1.65685L6.65674 7.31371L0.999884 1.65685L1.75413 0.902607L6.65674 5.80521Z"
+                fill="#A65CF0" />
+            </svg>
+          </button>
+          <ul class="list-reset catalog-list-open catalog-filter__list">
+            <li class="catalog-filter__item">
+              <label class="custom-checkbox ">
+                <input type="checkbox" class="custom-checkbox__field input-checkbox" data-validate-field="checkbox"
+                  name="sofas" id="sofas">
+                <span class="custom-checkbox__category">Диваны</span>
+              </label>
+            </li>
+            <li class="catalog-filter__item">
+              <label class="custom-checkbox ">
+                <input type="checkbox" class="custom-checkbox__field input-checkbox" data-validate-field="checkbox"
+                  name="Chairs" id="Chairs">
+                <span class="custom-checkbox__category">Кресла</span>
+              </label>
+            </li>
+            <li class="catalog-filter__item">
+              <label class="custom-checkbox ">
+                <input type="checkbox" class="custom-checkbox__field input-checkbox" data-validate-field="checkbox"
+                  name="Poufs" id="Poufs">
+                <span class="custom-checkbox__category">Пуфы</span>
+              </label>
+            </li>
+            <li class="catalog-filter__item">
+              <label class="custom-checkbox ">
+                <input type="checkbox" class="custom-checkbox__field input-checkbox" data-validate-field="checkbox"
+                  name="Beds" id="Beds">
+                <span class="custom-checkbox__category">Кровати</span>
+              </label>
+            </li>
+            <li class="catalog-filter__item">
+              <label class="custom-checkbox ">
+                <input type="checkbox" class="custom-checkbox__field input-checkbox" data-validate-field="checkbox"
+                  name="Curbstones" id="Curbstones">
+                <span class="custom-checkbox__category">Тумбы</span>
+              </label>
+            </li>
+            <li class="catalog-filter__item">
+              <label class="custom-checkbox ">
+                <input type="checkbox" class="custom-checkbox__field input-checkbox" data-validate-field="checkbox"
+                  name="Dressers" id="Dressers">
+                <span class="custom-checkbox__category">Комоды</span>
+              </label>
+            </li>
+            <li class="catalog-filter__item">
+              <label class="custom-checkbox ">
+                <input type="checkbox" class="custom-checkbox__field input-checkbox" data-validate-field="checkbox"
+                  name="Chair" id="Chair">
+                <span class="custom-checkbox__category">Стулья</span>
+              </label>
+            </li>
+            <li class="catalog-filter__item">
+              <label class="custom-checkbox ">
+                <input type="checkbox" class="custom-checkbox__field input-checkbox" data-validate-field="checkbox"
+                  name="Tables" id="Tables">
+                <span class="custom-checkbox__category">Столы</span>
+              </label>
+            </li>
+            <li class="catalog-filter__item">
+              <label class="custom-checkbox ">
+                <input type="checkbox" class="custom-checkbox__field input-checkbox" data-validate-field="checkbox"
+                  name="Accessories" id="Accessories">
+                <span class="custom-checkbox__category">Аксессуары</span>
+              </label>
+            </li>
+          </ul>
+        </li>
+        <li class="catalog-filter__category catalog-filter__price catalog-price catalog-category catalog__list-item">
+          <button class="btn-reset btn-catalog catalog-category__title"><span>Цена</span>
+            <svg class="catalog-icon" width="13" height="8" viewBox="0 0 13 8" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M6.65674 5.80521L11.5593 0.902607L12.3136 1.65685L6.65674 7.31371L0.999884 1.65685L1.75413 0.902607L6.65674 5.80521Z"
+                fill="#A65CF0" />
+            </svg>
+          </button>
+          <ul class="list-reset catalog-list-open ">
+            <li class="catalog-price__items">
+              <div class="catalog-price__prop">
+                <div class="catalog-price__item">
+                  <span class="catalog-price__descr">от</span>
+                  <input type="number" min="500" max="200000" placeholder="500" class="catalog-price__input"
+                    id="input-0">
+                </div>
+                <div class="catalog-price__item">
+                  <span class="catalog-price__descr">до</span>
+                  <input type="number" min="500" max="200000" placeholder="200000" class="catalog-price__input"
+                    id="input-1">
+                </div>
+              </div>
+              <div class="catalog-price__element" id="range-slider"></div>
+            </li>
+          </ul>
+        </li>
+        <li class="catalog-filter__category catalog-category catalog__list-item">
+          <button class="btn-reset btn-catalog catalog-category__title"><span>Скидка</span>
+            <svg class="catalog-icon" width="13" height="8" viewBox="0 0 13 8" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M6.65674 5.80521L11.5593 0.902607L12.3136 1.65685L6.65674 7.31371L0.999884 1.65685L1.75413 0.902607L6.65674 5.80521Z"
+                fill="#A65CF0" />
+            </svg>
+          </button>
+          <ul class="list-reset catalog-list-open catalog-filter__list">
+            <li class="catalog-filter__item">
+              <label class="custom-checkbox ">
+                <input type="checkbox" class="custom-checkbox__field input-checkbox" data-validate-field="checkbox"
+                  name="More" id="More">
+                <span class="custom-checkbox__category"> <span class="custom-checkbox__1">Более</span> <span
+                    class="custom-checkbox__2">></span> 5 000</span>
+              </label>
+            </li>
+            <li class="catalog-filter__item">
+              <label class="custom-checkbox ">
+                <input type="checkbox" class="custom-checkbox__field input-checkbox" data-validate-field="checkbox"
+                  name="Less_than" id="Less_than">
+                <span class="custom-checkbox__category"><span class="custom-checkbox__1">Менее</span> <span
+                    class="custom-checkbox__2"> </span> 5 000</span>
+              </label>
+            </li>
+            <li class="catalog-filter__item">
+              <label class="custom-checkbox ">
+                <input type="checkbox" class="custom-checkbox__field input-checkbox" data-validate-field="checkbox"
+                  name="No_matter" id="No_matter">
+                <span class="custom-checkbox__category">Не важно</span>
+              </label>
+            </li>
+          </ul>
+        </li>
+        <li class="catalog-filter__category catalog-category catalog__list-item">
+          <button class="btn-reset btn-catalog catalog-category__title"><span>Цвет</span>
+            <svg class="catalog-icon" width="13" height="8" viewBox="0 0 13 8" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M6.65674 5.80521L11.5593 0.902607L12.3136 1.65685L6.65674 7.31371L0.999884 1.65685L1.75413 0.902607L6.65674 5.80521Z"
+                fill="#A65CF0" />
+            </svg>
+          </button>
+          <ul class="list-reset catalog-list-open catalog-filter__list">
+            <li class="catalog-filter__item">
+              <label class="custom-checkbox ">
+                <input type="checkbox" class="custom-checkbox__field input-checkbox" data-validate-field="checkbox"
+                  name="brown" id="brown">
+                <span class="custom-checkbox__category">Коричневый</span>
+              </label>
+            </li>
+            <li class="catalog-filter__item">
+              <label class="custom-checkbox ">
+                <input type="checkbox" class="custom-checkbox__field input-checkbox" data-validate-field="checkbox"
+                  name="black" id="black">
+                <span class="custom-checkbox__category">Черный</span>
+              </label>
+            </li>
+            <li class="catalog-filter__item">
+              <label class="custom-checkbox ">
+                <input type="checkbox" class="custom-checkbox__field input-checkbox" data-validate-field="checkbox"
+                  name="beige" id="beige">
+                <span class="custom-checkbox__category">Бежевый</span>
+              </label>
+            </li>
+            <li class="catalog-filter__item">
+              <label class="custom-checkbox ">
+                <input type="checkbox" class="custom-checkbox__field input-checkbox" data-validate-field="checkbox"
+                  name="grey" id="grey">
+                <span class="custom-checkbox__category">Серый</span>
+              </label>
+            </li>
+            <li class="catalog-filter__item">
+              <label class="custom-checkbox ">
+                <input type="checkbox" class="custom-checkbox__field input-checkbox" data-validate-field="checkbox"
+                  name="white" id="white">
+                <span class="custom-checkbox__category">Белый</span>
+              </label>
+            </li>
+            <li class="catalog-filter__item">
+              <label class="custom-checkbox ">
+                <input type="checkbox" class="custom-checkbox__field input-checkbox" data-validate-field="checkbox"
+                  name="blue" id="blue">
+                <span class="custom-checkbox__category">Синий</span>
+              </label>
+            </li>
+            <li class="catalog-filter__item">
+              <label class="custom-checkbox ">
+                <input type="checkbox" class="custom-checkbox__field input-checkbox" data-validate-field="checkbox"
+                  name="orange" id="orange">
+                <span class="custom-checkbox__category">Оранжевый</span>
+              </label>
+            </li>
+            <li class="catalog-filter__item">
+              <label class="custom-checkbox ">
+                <input type="checkbox" class="custom-checkbox__field input-checkbox" data-validate-field="checkbox"
+                  name="yellow" id="yellow">
+                <span class="custom-checkbox__category">Желтый</span>
+              </label>
+            </li>
+            <li class="catalog-filter__item">
+              <label class="custom-checkbox ">
+                <input type="checkbox" class="custom-checkbox__field input-checkbox" data-validate-field="checkbox"
+                  name="green" id="green">
+                <span class="custom-checkbox__category">Зеленый</span>
+              </label>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="catalog-filter__collection catalog-collection">
+      <article class="catalog-collection__cart categoria">
+        <div class="catalog-collection__image">
+          <img src="../img/catalog-colection.png" alt="Кресла">
+        </div>
+        <div class="catalog-collection__wrapper">
+          <h3 class="mp-reset catalog-collection__title">Оксфорд 1950</h3>
+          <p class="mp-reset catalog-collection__descr">Новая коллекция изысканных кресел</p>
+          <div class="btn-reset categoria__btn categoria__btn--ef">
+            <a href="#" class="categoria__btn-link">В каталог</a>
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.625 7.5625L13.0625 11L9.625 14.4375" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <circle cx="11" cy="11" r="10" stroke="#A65CF0" stroke-width="2" />
+            </svg>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+            <div class="catalog-grid  rating">
+  <h3 class="mp-reset catalog-grid__title">Каталог</h3>
+  <div class="rating__wrapper">
+    <ul class="list-reset grid rating__list catalog-grid__list">
+      <li class="catalog-grid__item rating__list-item">
+        <article class="product product--rating">
+          <div class="product__rating">
+            <svg width="16" height="15" viewBox="0 0 16 15" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M15.2764 5.28193L10.5439 4.59758L8.42832 0.330127C8.37054 0.213287 8.27548 0.118702 8.15805 0.0612089C7.86355 -0.0834504 7.50567 0.037099 7.35842 0.330127L5.24285 4.59758L0.510317 5.28193C0.379841 5.30047 0.260549 5.36167 0.169216 5.45441C0.0587999 5.56733 -0.00204457 5.71924 5.24622e-05 5.87678C0.00214949 6.03431 0.0670165 6.18457 0.1804 6.29454L3.60445 9.61614L2.7955 14.3064C2.77653 14.4156 2.78867 14.5278 2.83053 14.6304C2.87239 14.733 2.94231 14.8218 3.03235 14.8869C3.12239 14.952 3.22896 14.9906 3.33996 14.9985C3.45096 15.0064 3.56196 14.9831 3.66037 14.9314L7.89337 12.717L12.1264 14.9314C12.2419 14.9926 12.3761 15.013 12.5048 14.9908C12.8291 14.9352 13.0472 14.6291 12.9912 14.3064L12.1823 9.61614L15.6063 6.29454C15.6995 6.20367 15.7611 6.08497 15.7797 5.95515C15.83 5.63059 15.6026 5.33015 15.2764 5.28193Z" />
+            </svg>
+            5,0
+          </div>
+          <div class="product__image-rating">
+            <img src="../img/rating_1_1920.png" alt="Диван кожаный">
+          </div>
+          <h3 class="mp-reset product__title product__title--rating">Диван кожаный <br>«R-94»</h3>
+          <div class="product__price product__price--rating product-price">
+            <span class="product-price__rating">94 990 руб</span>
+          </div>
+          <button class="product__btn product__btn--rating product__btn--ef btn-reset">Купить</button>
+        </article>
+      </li>
+    </ul>
+    <div class="catalog-grid__btns">
+      <button class="btn btn-reset catalog-btn catalog-grid__btn catalog-grid__active btn--stroke-ef"
+        id="button-1">1</button>
+      <button class="btn btn-reset catalog-btn catalog-grid__btn btn--stroke-ef" id="button-2">2</button>
+      <button class="btn btn-reset catalog-btn catalog-grid__btn  catalog-btn--3 btn--stroke-ef"
+        id="button-3">3</button>
+    </div>
+  </div>
+</div>
+
+          </div>
+        </div>
+        </section>
+    </main>
+    <footer class="footer">
+  <div class="footer__top">
+    <div class="container grid footer__container">
+      <div class="footer__top footer__top--left">
+        <a href="#" class="footer__logo">
+          <img src="/img/logo.svg" alt="sdp логотип">
+        </a>
+        <ul class="list-reset social-list">
+          <li class="social-list__item">
+            <a href="#" class="social-list__link social-list__link--fb" aria-label="Мы в фейсбук">
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M15 0C6.74999 0 0 6.76205 0 15.0904C0 22.6205 5.48999 28.8705 12.66 30V19.4578H8.84999V15.0904H12.66V11.762C12.66 7.98193 14.895 5.90361 18.33 5.90361C19.965 5.90361 21.675 6.18976 21.675 6.18976V9.90964H19.785C17.925 9.90964 17.34 11.0693 17.34 12.259V15.0904H21.51L20.835 19.4578H17.34V30C20.8746 29.4395 24.0933 27.6288 26.4149 24.8947C28.7364 22.1606 30.008 18.6832 30 15.0904C30 6.76205 23.25 0 15 0Z"
+                  fill="#999999" />
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a href="#" class="social-list__link social-list__link--vk" aria-label="Мы во вконтакте">
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M15 0C6.71601 0 0 6.7157 0 15C0 23.2843 6.71601 30 15 30C23.284 30 30 23.2843 30 15C30 6.7157 23.284 0 15 0ZM22.6088 16.6223C23.3079 17.3052 24.0476 17.9478 24.6752 18.7013C24.9532 19.0346 25.2153 19.3792 25.4148 19.7669C25.6996 20.3196 25.4425 20.9257 24.9477 20.9586L21.8747 20.958C21.081 21.0236 20.4494 20.7035 19.9169 20.1609C19.4919 19.7285 19.0975 19.2666 18.6881 18.8194C18.5208 18.6359 18.3447 18.4631 18.1347 18.3272C17.7158 18.0546 17.3518 18.1381 17.1118 18.5758C16.8672 19.0211 16.8114 19.5146 16.788 20.0102C16.7546 20.7348 16.5361 20.9242 15.809 20.9583C14.2554 21.031 12.7814 20.7953 11.4114 20.0121C10.2028 19.3212 9.26731 18.3462 8.45217 17.2423C6.86486 15.0902 5.64921 12.7283 4.55693 10.2985C4.3111 9.7513 4.49095 9.45852 5.09463 9.44716C6.0976 9.42783 7.10056 9.43028 8.10353 9.44624C8.51171 9.45268 8.78179 9.68624 8.93862 10.0714C9.48061 11.4049 10.1451 12.6737 10.9777 13.8503C11.1996 14.1637 11.4261 14.4761 11.7486 14.6974C12.1047 14.9417 12.376 14.861 12.5438 14.4635C12.6513 14.2109 12.6976 13.9409 12.7209 13.6702C12.8007 12.743 12.8102 11.8162 12.6721 10.8927C12.5862 10.3148 12.2612 9.94158 11.6851 9.83233C11.3917 9.77678 11.4347 9.66813 11.5774 9.50056C11.8251 9.21084 12.0571 9.03161 12.5208 9.03161L15.9928 9.031C16.5401 9.13841 16.6628 9.38394 16.7371 9.93514L16.7402 13.7936C16.7337 14.0069 16.8473 14.6391 17.2303 14.7787C17.5372 14.88 17.7397 14.6339 17.9233 14.4396C18.7559 13.556 19.3492 12.5131 19.8804 11.4338C20.1149 10.9577 20.3171 10.4652 20.5136 9.97166C20.6596 9.60675 20.8868 9.42721 21.2986 9.43335L24.642 9.43734C24.7406 9.43734 24.8406 9.43826 24.9382 9.45514C25.5017 9.55151 25.6561 9.79396 25.4817 10.3436C25.2074 11.2073 24.6743 11.9266 24.1531 12.6479C23.5946 13.4201 22.9989 14.1652 22.4458 14.9408C21.9376 15.6497 21.9778 16.0066 22.6088 16.6223Z"
+                  fill="#999999" />
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a href="#" class="social-list__link social-list__link--insta" aria-label="Мы в Инстаграмм">
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12.1289 15C12.1289 16.5857 13.4143 17.8711 15 17.8711C16.5857 17.8711 17.8711 16.5857 17.8711 15C17.8711 13.4143 16.5857 12.1289 15 12.1289C13.4143 12.1289 12.1289 13.4143 12.1289 15Z"
+                  fill="#999999" />
+                <path
+                  d="M8.28558 9.91991C8.4236 9.54591 8.64378 9.2074 8.92989 8.92953C9.20775 8.64343 9.54604 8.42325 9.92026 8.28523C10.2238 8.16736 10.6797 8.02705 11.5195 7.98883C12.4279 7.9474 12.7003 7.93848 15.0001 7.93848C17.3001 7.93848 17.5725 7.94717 18.4807 7.9886C19.3204 8.02705 19.7766 8.16736 20.0799 8.28523C20.4541 8.42325 20.7926 8.64343 21.0702 8.92953C21.3563 9.2074 21.5765 9.54568 21.7148 9.91991C21.8326 10.2234 21.9729 10.6796 22.0112 11.5193C22.0526 12.4275 22.0615 12.6999 22.0615 14.9999C22.0615 17.2997 22.0526 17.5721 22.0112 18.4805C21.9729 19.3203 21.8326 19.7762 21.7148 20.0797C21.5765 20.454 21.3566 20.7923 21.0705 21.0701C20.7926 21.3562 20.4543 21.5764 20.0801 21.7144C19.7766 21.8325 19.3204 21.9728 18.4807 22.011C17.5725 22.0525 17.3003 22.0612 15.0003 22.0612C12.7 22.0612 12.4277 22.0525 11.5197 22.011C10.6799 21.9728 10.2238 21.8325 9.92026 21.7144C9.16907 21.4247 8.57535 20.8309 8.28558 20.0797C8.16771 19.7762 8.0274 19.3203 7.98895 18.4805C7.94753 17.5721 7.93883 17.2997 7.93883 14.9999C7.93883 12.6999 7.94753 12.4275 7.98895 11.5193C8.02718 10.6796 8.16748 10.2234 8.28558 9.91991ZM15.0001 19.4226C17.4429 19.4226 19.4232 17.4426 19.4232 14.9997C19.4232 12.5569 17.4429 10.5768 15.0001 10.5768C12.5574 10.5768 10.5771 12.5569 10.5771 14.9997C10.5771 17.4426 12.5574 19.4226 15.0001 19.4226ZM10.4023 11.4356C10.9731 11.4356 11.4359 10.9728 11.4359 10.4019C11.4359 9.8311 10.9731 9.3683 10.4023 9.3683C9.83145 9.3683 9.36865 9.8311 9.36865 10.4019C9.36888 10.9728 9.83145 11.4356 10.4023 11.4356Z"
+                  fill="#999999" />
+                <path
+                  d="M15 0C23.283 0 30 6.717 30 15C30 23.283 23.283 30 15 30C6.717 30 0 23.283 0 15C0 6.717 6.717 0 15 0ZM6.43867 18.5511C6.48033 19.468 6.62613 20.094 6.83899 20.6419C7.28645 21.7989 8.20107 22.7135 9.35806 23.161C9.90578 23.3739 10.532 23.5194 11.4487 23.5613C12.3672 23.6032 12.6606 23.6133 14.9998 23.6133C17.3392 23.6133 17.6324 23.6032 18.5511 23.5613C19.4678 23.5194 20.094 23.3739 20.6417 23.161C21.2167 22.9447 21.7371 22.6057 22.1674 22.1674C22.6055 21.7374 22.9445 21.2167 23.1608 20.6419C23.3736 20.0942 23.5194 19.468 23.5611 18.5513C23.6034 17.6326 23.6133 17.3392 23.6133 15C23.6133 12.6608 23.6034 12.3674 23.5613 11.4489C23.5197 10.532 23.3741 9.90601 23.1612 9.35806C22.9449 8.78334 22.6057 8.26263 22.1674 7.83257C21.7374 7.39426 21.2167 7.05528 20.6419 6.83899C20.094 6.62613 19.468 6.48056 18.5511 6.43867C17.6326 6.39679 17.3392 6.38672 15 6.38672C12.6608 6.38672 12.3674 6.39679 11.4489 6.4389C10.532 6.48056 9.90601 6.62613 9.35806 6.83876C8.78334 7.05505 8.26263 7.39426 7.83234 7.83257C7.39426 8.26286 7.05505 8.78334 6.83899 9.35806C6.6259 9.90601 6.48033 10.532 6.43845 11.4489C6.39656 12.3674 6.38672 12.6608 6.38672 15C6.38672 17.3392 6.39656 17.6326 6.43867 18.5511Z"
+                  fill="#999999" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__top footer__top--right">
+        <ul class="list-reset footer__list">
+          <li class="footer__list-item">
+            <h3 class="mp-reset footer__title">О нас</h3>
+            <ul class="footer__prop list-reset">
+              <li class="footer__prop-item">
+                <a href="contact.html" class="footer__prop-link footer__prop-link--ef">
+                  О компании
+                </a>
+              </li>
+              <li class="footer__prop-item">
+                <a href="#" class="footer__prop-link footer__prop-link--ef">
+                  Блог
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="footer__list-item">
+            <h3 class="mp-reset footer__title">Услуги</h3>
+            <ul class="footer__prop list-reset">
+              <li class="footer__prop-item">
+                <a href="#" class="footer__prop-link footer__prop-link--ef">
+                  Доставка
+                </a>
+              </li>
+              <li class="footer__prop-item">
+                <a href="#" class="footer__prop-link footer__prop-link--ef">
+                  Рассрочка и кредит
+                </a>
+              </li>
+              <li class="footer__prop-item">
+                <a href="#" class="footer__prop-link footer__prop-link--ef">
+                  Сборка и установка
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="footer__list-item">
+            <h3 class="mp-reset footer__title">Связь с нами</h3>
+            <ul class="footer__prop list-reset">
+              <li class="footer__prop-item">
+                <a href="#" class="footer__prop-link footer__prop-link--ef">
+                  Обратная связь
+                </a>
+              </li>
+              <li class="footer__prop-item">
+                <a href="contact.html" class="footer__prop-link footer__prop-link--ef">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="footer__list-item">
+            <h3 class="mp-reset footer__title">Сотрудничество</h3>
+            <ul class="footer__prop list-reset">
+              <li class="footer__prop-item">
+                <a href="cooperation.html" class="footer__prop-link footer__prop-link--ef">
+                  Поставщикам
+                </a>
+              </li>
+              <li class="footer__prop-item">
+                <a href="#" class="footer__prop-link footer__prop-link--ef">
+                  Оптовикам
+                </a>
+              </li>
+              <li class="footer__prop-item">
+                <a href="#" class="footer__prop-link footer__prop-link--ef">
+                  Карьера
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="footer__bottom-descr">SDP@ 2011-2021</div>
+  </div>
+</footer>
+
+    <div class="graph-modal">
+  <div class="graph-modal__container basket-modal" role="dialog" aria-modal="true" data-graph-target="basket-modal">
+    <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M1.42872 0.238643L6.75487 5.42386C7.08171 5.74206 7.08171 6.25794 6.75487 6.57614L1.42872 11.7614C1.10188 12.0795 0.571969 12.0795 0.245129 11.7614C-0.0817098 11.4432 -0.0817098 10.9273 0.24513 10.6091L4.97949 6L0.24513 1.39091C-0.0817089 1.07272 -0.0817089 0.556834 0.24513 0.238643C0.57197 -0.0795478 1.10188 -0.0795477 1.42872 0.238643Z"
+          fill="#999999" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M10.5713 0.238643L5.24513 5.42386C4.91829 5.74206 4.91829 6.25794 5.24513 6.57614L10.5713 11.7614C10.8981 12.0795 11.428 12.0795 11.7549 11.7614C12.0817 11.4432 12.0817 10.9273 11.7549 10.6091L7.02051 6L11.7549 1.39091C12.0817 1.07272 12.0817 0.556834 11.7549 0.238643C11.428 -0.0795478 10.8981 -0.0795477 10.5713 0.238643Z"
+          fill="#999999" />
+      </svg>
+    </button>
+    <div class="graph-modal__content">
+      <h2 class="mp-reset section-title basket-modal__title">Купить в один клик</h2>
+      <p class="mp-reset basket-modal__descr">Чтобы оформить заказ — заполните формы ниже и наш менеджер свяжется с вами в
+        течении часа.</p>
+      <div class="basket-modal-order basket-modal-order-catalog">
+        <div class="basket-modal-order__top">
+          <div class="basket-modal-order__qantity">Товаров в заказе: <span class="basket-modal-order__bold">3 шт</span>
+          </div>
+          <div class="basket-modal-order__summ">Общая сумма заказа: <span class="basket-modal-order__bold">25 990</span>
+          </div>
+        </div>
+        <div class="basket-modal-order__content">
+          <button class="btn-reset basket-modal-order__show basket-modal-order-catalog__show">
+            Состав заказа
+            <svg>
+              <use class="btns" xlink:href="img/sprite.svg#angle"></use>
+            </svg>
+          </button>
+          <ul class="list-reset basket-modal-order__list">
+            <li class="basket-modal-order__item">
+            </li>
+          </ul>
+        </div>
+      </div>
+      <form action="#" class="basket-modal__form">
+        <label class="basket-modal__label">
+          <input type="text" class="input input--basket-modal input-name" data-validate-field="name"
+            placeholder="Как вас зовут?">
+        </label>
+        <label class="basket-modal__label">
+          <input type="tel" class="input input--basket-modal input-tel" data-validate-field="tel"
+            placeholder="Ваш телефон">
+        </label>
+        <button class="btn basket-modal__btn btn-reset btn--fill btn--fill-ef">Отправить</button>
+        <div class="basket-modal__label">
+          <label class="custom-checkbox callback">
+            <input type="checkbox" class="custom-checkbox__field input-checkbox" data-validate-field="checkbox">
+            <span class="custom-checkbox__content">Принимаю <span><a href="#" class="callback__link">пользовательское
+                  соглашение</a></span></span>
+          </label>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="graph-modal__container basket-modal" role="dialog" aria-modal="true" data-graph-target="cart-modal">
+    <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M1.42872 0.238643L6.75487 5.42386C7.08171 5.74206 7.08171 6.25794 6.75487 6.57614L1.42872 11.7614C1.10188 12.0795 0.571969 12.0795 0.245129 11.7614C-0.0817098 11.4432 -0.0817098 10.9273 0.24513 10.6091L4.97949 6L0.24513 1.39091C-0.0817089 1.07272 -0.0817089 0.556834 0.24513 0.238643C0.57197 -0.0795478 1.10188 -0.0795477 1.42872 0.238643Z"
+          fill="#999999" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M10.5713 0.238643L5.24513 5.42386C4.91829 5.74206 4.91829 6.25794 5.24513 6.57614L10.5713 11.7614C10.8981 12.0795 11.428 12.0795 11.7549 11.7614C12.0817 11.4432 12.0817 10.9273 11.7549 10.6091L7.02051 6L11.7549 1.39091C12.0817 1.07272 12.0817 0.556834 11.7549 0.238643C11.428 -0.0795478 10.8981 -0.0795477 10.5713 0.238643Z"
+          fill="#999999" />
+      </svg> </button>
+    <div class="graph-modal__content">
+      <h2 class="mp-reset section-title basket-modal__title">Купить в один клик</h2>
+      <p class="mp-reset basket-modal__descr">Чтобы оформить заказ — заполните формы ниже и наш менеджер свяжется с вами в
+        течении часа.</p>
+      <form action="#" class="basket-modal__form">
+        <label class="basket-modal__label">
+          <input type="text" class="input input--basket-modal input-name" data-validate-field="name"
+            placeholder="Как вас зовут?">
+        </label>
+        <label class="basket-modal__label">
+          <input type="tel" class="input input--basket-modal input-tel" data-validate-field="tel"
+            placeholder="Ваш телефон">
+        </label>
+        <button class="btn basket-modal__btn btn-reset btn--fill btn--fill-ef">Отправить</button>
+        <div class="basket-modal__label">
+          <label class="custom-checkbox callback">
+            <input type="checkbox" class="custom-checkbox__field input-checkbox" data-validate-field="checkbox">
+            <span class="custom-checkbox__content">Принимаю <span><a href="#" class="callback__link">пользовательское
+                  соглашение</a></span></span>
+          </label>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="graph-modal__container send-modal" role="dialog" aria-modal="true" data-graph-target="send-modal">
+    <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M1.42872 0.238643L6.75487 5.42386C7.08171 5.74206 7.08171 6.25794 6.75487 6.57614L1.42872 11.7614C1.10188 12.0795 0.571969 12.0795 0.245129 11.7614C-0.0817098 11.4432 -0.0817098 10.9273 0.24513 10.6091L4.97949 6L0.24513 1.39091C-0.0817089 1.07272 -0.0817089 0.556834 0.24513 0.238643C0.57197 -0.0795478 1.10188 -0.0795477 1.42872 0.238643Z"
+          fill="#999999" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M10.5713 0.238643L5.24513 5.42386C4.91829 5.74206 4.91829 6.25794 5.24513 6.57614L10.5713 11.7614C10.8981 12.0795 11.428 12.0795 11.7549 11.7614C12.0817 11.4432 12.0817 10.9273 11.7549 10.6091L7.02051 6L11.7549 1.39091C12.0817 1.07272 12.0817 0.556834 11.7549 0.238643C11.428 -0.0795478 10.8981 -0.0795477 10.5713 0.238643Z"
+          fill="#999999" />
+      </svg>
+    </button>
+    <div class="graph-modal__content">
+      <div class="send-modal__content">
+        <div>
+          <img src="../img/send-modal.svg" alt="Желтый слон">
+        </div>
+        <div class="send-modal__descr">Спасибо, мы вам перезвоним!</div>
+      </div>
+    </div>
+  </div>
+  <div class="graph-modal__container scale-modal" role="dialog" aria-modal="true" data-graph-target="scale-image">
+    <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M1.42872 0.238643L6.75487 5.42386C7.08171 5.74206 7.08171 6.25794 6.75487 6.57614L1.42872 11.7614C1.10188 12.0795 0.571969 12.0795 0.245129 11.7614C-0.0817098 11.4432 -0.0817098 10.9273 0.24513 10.6091L4.97949 6L0.24513 1.39091C-0.0817089 1.07272 -0.0817089 0.556834 0.24513 0.238643C0.57197 -0.0795478 1.10188 -0.0795477 1.42872 0.238643Z"
+          fill="#999999" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M10.5713 0.238643L5.24513 5.42386C4.91829 5.74206 4.91829 6.25794 5.24513 6.57614L10.5713 11.7614C10.8981 12.0795 11.428 12.0795 11.7549 11.7614C12.0817 11.4432 12.0817 10.9273 11.7549 10.6091L7.02051 6L11.7549 1.39091C12.0817 1.07272 12.0817 0.556834 11.7549 0.238643C11.428 -0.0795478 10.8981 -0.0795477 10.5713 0.238643Z"
+          fill="#999999" />
+      </svg>
+    </button>
+    <div class="graph-modal__content scale-image">
+      <div class="scale-image__content cart-product cart-image">
+        <div class=" scale-modal__image cart-product__bg">
+          <img class="cart-image__bg" src="../img/cart-image-modal-1.png" alt="Тканевый диван">
+        </div>
+        <div class="scale-modal__slaider ">
+          <button class="btn-reset scale-modal__btn  scale-modal__prev">
+            <svg class="scale-modal__arrow scale-modal__arrow--cart" width="32" height="32" viewBox="0 0 32 32"
+              fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 11L13 16L18 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <circle r="15" transform="matrix(-1 0 0 1 16 16)" stroke="#A65CF0" stroke-width="2" />
+            </svg>
+          </button>
+          <button class="btn-reset scale-modal__btn  scale-modal__next">
+            <svg class="scale-modal__arrow scale-modal__arrow--cart" width="32" height="32" viewBox="0 0 32 32"
+              fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <circle cx="16" cy="16" r="15" stroke="#A65CF0" stroke-width="2" />
+            </svg>
+          </button>
+          <div class="swiper modal-slider">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper modal-slider__wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide modal-slider__slide">
+                <div class="modal-slider__item">
+                  <img class="modal-slider__image" src="../img/scale-slider-1.png" alt="Тканевый диван вид сверху">
+                </div>
+              </div>
+              <div class="swiper-slide modal-slider__slide">
+                <div class="modal-slider__item">
+                  <img class="modal-slider__image" src="../img/scale-slider-2.png" alt="Тканевый диван вид сбоку">
+                </div>
+              </div>
+              <div class="swiper-slide modal-slider__slide">
+                <div class="modal-slider__item">
+                  <img class="modal-slider__image" src="../img/scale-slider-3.png" alt="Тканевый диван вид сзади">
+                </div>
+              </div>
+              <div class="swiper-slide modal-slider__slide">
+                <div class="modal-slider__item">
+                  <img class="modal-slider__image" src="../img/scale-slider-4.png"
+                    alt="Тканевый диван вид в разложенном виде">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+</body>
+
+</html>
